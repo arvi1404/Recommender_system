@@ -1,4 +1,4 @@
-# Personalized Recommendation System for E-Commerce
+# Recommendation System for E-Commerce
 
 This project aims to enhance the online shopping experience by developing a personalized recommendation system for an e-commerce platform. By analyzing user preferences and behavior, the system generates tailored product suggestions, improving product discovery, increasing sales, and fostering customer engagement.
 
@@ -6,24 +6,6 @@ This project aims to enhance the online shopping experience by developing a pers
 
 ## Data Preprocessing
 To build an effective recommendation system, the initial product dataset underwent preprocessing to extract relevant products and generate appropriate tags.
-
-### Extracting Clothing Data
-- Filtered the dataset to retain only clothing-related products.
-- Assigned numeric product IDs, replacing existing identifiers.
-
-### Handling Missing Values
-- Removed columns containing excessive missing data.
-- Filled in missing brand names using relevant information from product descriptions.
-
-### Cleaning Product Descriptions and Categories
-- Eliminated extraneous text from product descriptions.
-- Corrected improperly concatenated words (e.g., merged words from adjacent sentences).
-- Joined words separated by hyphens to ensure accurate tagging.
-
-### Tag Generation
-- Removed stopwords and non-alphabetic characters.
-- Selected keywords based on specific parts of speech (adjectives, nouns, and proper nouns).
-- Applied lemmatization to standardize terms before adding them to the tags column.
 
 ---
 
@@ -34,8 +16,6 @@ The user interface is built using Flask, providing an interactive platform for u
 - **User Authentication**: Allows users to sign up and log in, enabling access to personalized recommendations.
 - **Product Recommendation Page**: Displays personalized product suggestions, including product images, names, and prices.
 - **Product Details Page**: Shows product descriptions, categories, ratings, review counts, and related product recommendations using content-based and collaborative filtering methods.
-- **User Purchase History**: Provides an overview of a user's previously purchased items.
-
 ---
 
 ## Backend Development
@@ -66,6 +46,7 @@ The backend is responsible for managing user interactions and executing the reco
 - Ranks recommendations based on a combination of similarity scores and user ratings to improve relevance.
 
 ### Hybrid Recommendation Model
+- Provides personalised recommendations for customers who have an account
 - Combines content-based filtering with collaborative filtering for enhanced accuracy.
 - Merges recommendations from different models, eliminating duplicates to provide a more diverse selection of suggested products.
 
@@ -115,10 +96,10 @@ The MySQL database is designed to efficiently manage user and product data.
 
 ---
 
-## Screenshots
+## Execution
+To run the engine first set up a virtual enviroment by running setup.sh
 
-![Screenshot 1](https://github.com/user-attachments/assets/19f5ce33-7b36-4484-80b5-6b3e60614ee8)
-![Screenshot 2](https://github.com/user-attachments/assets/e97a090d-6001-4aa8-9dc4-107e57c8b0e4)
-![Screenshot 3](https://github.com/user-attachments/assets/3ae89cd6-e7b2-4a37-acc7-384dc6c873d7)
-![Screenshot 4](https://github.com/user-attachments/assets/cfd47083-158e-4d75-8eea-0c8e153ec021)
+'''bash
+chmod +x setup.sh
+./setup.sh
 
