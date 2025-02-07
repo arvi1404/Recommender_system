@@ -99,8 +99,21 @@ The MySQL database is designed to efficiently manage user and product data.
 ## Execution
 To run the engine first set up a virtual enviroment by running setup.sh
 
-'''bash
+```bash
 chmod +x setup.sh
 ./setup.sh
-'''
+```
+Also ensure mySQL is installed and running in the server. The database can be created by running,
+
+```python
+python create_db.py
+python data_loader.py
+```
+Start the app by,
+```python
+python app.py
+```
+
+
+
 

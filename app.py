@@ -14,4 +14,4 @@ db.init_app(app)
 app.register_blueprint(routes, url_prefix='/')
 
 if __name__=='__main__':
-    app.run(host='0.0.0.0', port=5001,debug=True)
+    app.run(host='0.0.0.0', port=5001)
