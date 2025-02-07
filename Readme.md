@@ -99,7 +99,8 @@ The MySQL database is designed to efficiently manage user and product data.
 ## Execution
 To run the engine first set up a virtual enviroment by running setup.sh
 
-'''bash
+'''
 chmod +x setup.sh
 ./setup.sh
+'''
 
