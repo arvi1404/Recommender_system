@@ -1,6 +1,8 @@
-from Utils import *
+from Utils import calculate_avg_cg,calculate_dcg,calculate_ndcg
 from sklearn.feature_extraction.text import TfidfVectorizer
-
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 # Trending Funtion
 def get_trending_products(train_data, top_n=10):

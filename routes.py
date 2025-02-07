@@ -1,8 +1,9 @@
 from flask import Flask, request, render_template, redirect, session, flash, url_for, jsonify,Blueprint
 import random
-from recommendation import *
+from recommendation import get_trending_products, content_based_recommendations, specific_item_based_recommendation,hybrid_recommendations
+from Utils import get_product_data, truncate, get_user_and_product_data, fetch_product_by_id
 from models import *
-
+import pandas as pd
 
 routes = Blueprint('routes', __name__)
 
